@@ -1,0 +1,21 @@
+# Core requirements for search-only mode (no LLM APIs needed)
+chromadb>=0.4.0
+sentence-transformers>=2.2.0
+pandas>=1.5.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+torch>=2.0.0
+transformers>=4.30.0
+openpyxl>=3.1.0  # For Excel file support
+
+# Optional: For better performance
+faiss-cpu>=1.7.0
+
+# Web interface (optional)
+flask>=2.3.0
+flask-cors>=4.0.0
+
+# Utils
+python-dotenv>=1.0.0
+argparse
+
