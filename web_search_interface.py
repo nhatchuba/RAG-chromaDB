@@ -114,8 +114,25 @@ if __name__ == '__main__':
     if init_search_system():
         print(f"🌐 Web interface starting at: http://localhost:5000")
         print("🔍 Ready for vector search testing!")
+        print("🔄 Auto-reload enabled - server will restart when code changes")
         print("=" * 60)
-        app.run(host='0.0.0.0', port=5000, debug=True)
+        
+        # Configure Flask with auto-reload and reloader options
+        app.run(
+            host='0.0.0.0', 
+            port=5000, 
+            debug=True,
+            use_reloader=True,          # Enable auto-reload
+            reloader_type='stat',       # Use stat reloader (more reliable)
+            extra_files=[               # Watch additional files for changes
+                'smart_answer_extractor.py',
+                'natural_answer_generator.py',
+                'setup_search_only.py',
+                'templates/search.html',
+                'rag/core.py',
+                'embeddings/__init__.py'
+            ]
+        )
     else:
         print("❌ Failed to initialize search system. Please check your setup.")
         sys.exit(1)

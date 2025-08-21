@@ -19,3 +19,6 @@ flask-cors>=4.0.0
 python-dotenv>=1.0.0
 argparse
 
+# Development tools
+watchdog>=3.0.0  # For auto-reload in development
+

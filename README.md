@@ -80,6 +80,21 @@ python test_search.py
 ```
 
 ### **2. Web Interface Mode**
+
+**Development Server (Tự động reload khi code thay đổi):**
+```bash
+# Windows
+start_dev.bat
+
+# Linux/Mac  
+chmod +x start_dev.sh
+./start_dev.sh
+
+# Hoặc chạy trực tiếp
+python run_dev.py
+```
+
+**Production Server:**
 ```bash
 python web_search_interface.py
 ```
