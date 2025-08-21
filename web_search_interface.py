@@ -107,14 +107,14 @@ def api_sample_queries():
     return jsonify({'samples': samples})
 
 if __name__ == '__main__':
-    print("🌐 Starting RAG Search Web Interface...")
+    print("[WEB] Starting RAG Search Web Interface...")
     print("=" * 60)
     
     # Initialize search system
     if init_search_system():
-        print(f"🌐 Web interface starting at: http://localhost:5000")
-        print("🔍 Ready for vector search testing!")
-        print("🔄 Auto-reload enabled - server will restart when code changes")
+        print("[WEB] Web interface starting at: http://localhost:5000")
+        print("[SEARCH] Ready for vector search testing!")
+        print("[AUTO] Auto-reload enabled - server will restart when code changes")
         print("=" * 60)
         
         # Configure Flask with auto-reload and reloader options

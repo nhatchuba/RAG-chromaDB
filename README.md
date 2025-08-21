@@ -83,8 +83,8 @@ python test_search.py
 
 **Development Server (Tự động reload khi code thay đổi):**
 ```bash
-# Windows
-start_dev.bat
+# Windows PowerShell (cần dấu ./ ở đầu)
+.\start_dev.bat
 
 # Linux/Mac  
 chmod +x start_dev.sh
@@ -94,10 +94,19 @@ chmod +x start_dev.sh
 python run_dev.py
 ```
 
+**Simple Server (Không auto-reload, ổn định hơn):**
+```bash
+python simple_server.py
+```
+
 **Production Server:**
 ```bash
 python web_search_interface.py
 ```
+
+**Lưu ý:**
+- Nếu gặp lỗi Unicode trên Windows, hãy dùng `simple_server.py`
+- PowerShell cần `.\start_dev.bat` thay vì `start_dev.bat`
 
 ### **3. API Endpoints**
 ```bash
